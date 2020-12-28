@@ -1,0 +1,119 @@
+@import "_breakpoints", "_functions", "_variables";
+
+@font-face {
+  font-family: "Oraqle Script";
+  src: local("Oraqle Script"), local("../fonts"),
+    url("../fonts/OraqleScript.woff") format("woff"),
+    url("../fonts/OraqleScript.otf") format("otf"),
+    url("../fonts/OraqleScript.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-style: normal;
+
+  font-weight: 300;
+  font-style: normal;
+  color: color(font-dark);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+  font-weight: 600;
+  color: color(font-dark);
+}
+
+a {
+  color: color(font-dark);
+  display: block;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+//input fields
+
+input,
+select,
+textarea {
+  width: 100%;
+  outline: none;
+  border: 1.5px solid #2c3d5033;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  font-size: 15px;
+  &:hover,
+  &:focus {
+    border: 1.5px solid #2c3d507e;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//general
+
+.sectionWrapper {
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.siteHeader {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  padding: 20px 0;
+  .logoWrapper {
+    img {
+      height: 80px;
+    }
+  }
+  .menuWrapper {
+    display: flex;
+    justify-content: flex-end;
+    .menuItem {
+      padding: 0 7px;
+      font-size: 18px;
+      a {
+        color: color(font-white);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bannerWrapper {
+  .videoWrapper {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+}
