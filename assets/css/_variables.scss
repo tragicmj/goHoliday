@@ -1120,6 +1120,8 @@ $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
 
 //++++Color Variables++++//
 $colors: (
+  primary: #f48c1c,
+  secondary: #04acec,
   font-white: #fff,
   bgcolorlight: #f7f7f7,
   font-dark: #1b1b1b,
@@ -1131,6 +1133,5 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
-$heaingFont: "Oraqle Script", sans-serif;
 $boxShadowDark: 0 4px 22px 1px rgba(202, 202, 202, 0.29);
 $boxShadowTwo: 0 4px 22px 1px rgba(35, 35, 35, 0.29);
