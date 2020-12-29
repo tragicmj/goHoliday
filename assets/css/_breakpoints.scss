@@ -136,12 +136,20 @@
 
 //++++Variable Breakpoints++++//
 @mixin breakpoint($point) {
-  @if $point == mxlr {
+  // @if $point == xxxlr {
+  //   @media (max-width: 1280px) {
+  //     @content;
+  //   }
+  // }
+  @if $point == xxlr {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  } @else if $point == mxlr {
     @media (max-width: 1280px) {
       @content;
     }
-  }
-  @if $point == xlr {
+  } @else if $point == xlr {
     @media (max-width: 1199px) {
       @content;
     }
