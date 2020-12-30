@@ -903,12 +903,12 @@ $box-size: $spacing-xxlarge;
     }
     &:nth-child(n) {
       .content {
-        margin: 0 auto 0 10px;
+        margin: 0 auto 0 18px;
       }
     }
     &:nth-child(2n) {
       .content {
-        margin: 0 10px 0 auto;
+        margin: 0 18px 0 auto;
       }
     }
   }
