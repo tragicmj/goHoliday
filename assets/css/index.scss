@@ -146,6 +146,9 @@ input[type="number"]::-webkit-outer-spin-button {
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
+  @include media-breakpoint-down(sm){
+   font-size: 50px;
+  }
 }
 
 .customSlickArrow {
@@ -196,8 +199,15 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 20px 0;
   left: 0;
   .logoWrapper {
+
+    @include media-breakpoint-down(sm){
+      margin: 0 auto;
+    }
     img {
       height: 80px;
+      @include media-breakpoint-down(sm){
+        margin: 0 auto;
+      }
       &.logoLight {
         display: block;
       }
@@ -359,7 +369,7 @@ input[type="number"]::-webkit-outer-spin-button {
       );
     }
     video {
-      width: 100%;
+      width: 100vw;
       height: 95vh;
       object-fit: cover;
     }
@@ -374,6 +384,9 @@ input[type="number"]::-webkit-outer-spin-button {
     display: block;
     color: $white;
     text-align: center;
+    @include media-breakpoint-down(sm){
+     padding: 0 15px;
+    }
     h1 {
       font-size: 120px;
       font-weight: normal;
@@ -381,11 +394,22 @@ input[type="number"]::-webkit-outer-spin-button {
       line-height: 1;
       font-family: "OraqleScript", sans-serif;
       color: $white;
+      @include media-breakpoint-down(md){
+        font-size: 90px;
+      }
+      @include media-breakpoint-down(sm){
+       font-size: 50px;
+      }
     }
     .blinking-cursor {
       pointer-events: none;
       user-select: none;
       animation: blink 1s steps(2, start) infinite;
+    }
+    p{
+      @include media-breakpoint-down(sm){
+        font-size: 15px;
+      }
     }
   }
 }
@@ -401,6 +425,14 @@ input[type="number"]::-webkit-outer-spin-button {
     right: -25px;
     top: 41%;
     transform: translateY(-59%);
+    @include media-breakpoint-down(md){
+      position: relative;
+      width: 97%;
+      top: 0%;
+      transform: unset;
+      right: 0;
+      margin: 0 auto;
+    }
     .col {
       padding: 0 8px;
       &:first-child {
@@ -447,17 +479,37 @@ input[type="number"]::-webkit-outer-spin-button {
       border: 2px solid color(primary);
       padding: 20px;
       text-align: center;
+      @include breakpoint(xlr){
+        min-height: 140px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: 32%;
+        flex-basis: 32%;
+        margin:  0 0 20px;
+        min-height: auto;
+      }
+      @include media-breakpoint-down(sm){
+        max-width: 48%;
+        flex-basis: 48%;
+        padding: 20px 12px;
+      }
       svg {
         fill: color(primary);
         width: 44px;
         margin: 0 0 12px;
         height: auto;
+        @include media-breakpoint-down(sm){
+          width: 35px;
+        }
       }
       h6 {
         font-size: 16px;
         margin: 0;
         font-weight: 400;
         color: color(primary);
+        @include media-breakpoint-down(sm){
+         font-size: 13px;
+        }
       }
       &:hover {
         background: #ff512f; /* fallback for old browsers */
@@ -811,6 +863,10 @@ $box-size: $spacing-xxlarge;
           padding: 0 28px;
           bottom: 7%;
           color: $white;
+          @include breakpoint(xlr){
+            padding: 0 37px;
+            bottom: 9%;
+          }
           h6 {
             font-size: 18px;
             color: $white;
@@ -937,6 +993,9 @@ footer {
   .policiesWrapper {
     display: flex;
     justify-content: center;
+    @include media-breakpoint-down(sm){
+      flex-wrap: wrap;
+    }
     a + a {
       margin-left: 12px;
     }
@@ -944,6 +1003,9 @@ footer {
       color: $white;
       text-decoration: none;
       font-size: 15px;
+      @include media-breakpoint-down(sm){
+       margin-bottom: 12px;
+      }
     }
   }
   .callMailWrap {
@@ -972,11 +1034,18 @@ footer {
       font-size: 12px;
       margin: 0;
       opacity: 0.8;
+      @include media-breakpoint-down(sm){
+        text-align: center;
+        margin-bottom: 12px;
+      }
     }
     .socialWrapper {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @include media-breakpoint-down(sm){
+       justify-content: center;
+      }
       a + a {
         margin-left: 15px;
       }

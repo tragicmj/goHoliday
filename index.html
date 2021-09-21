@@ -40,13 +40,13 @@
     <header class="siteHeader">
       <div class="sectionWrapper">
         <div class="row no-gutters justify-content-between align-items-center">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-2 col-12">
             <a class="logoWrapper" href="index.html">
               <img src="./assets/img/logoWhite.png" class="logoLight" alt="" />
               <img src="./assets/img/logo.png" class="logoDark" alt="" />
             </a>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-9 col-md-10 d-md-block d-none">
             <div class="menuWrapper">
               <div class="menuItem active">
                 <a href="index.html">
@@ -250,7 +250,7 @@
       </div>
       <div class="contentWrapper">
         <div class="row no-gutters justify-content-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-12">
             <h1>
               It's time for new <br />
               &nbsp;
@@ -310,7 +310,7 @@
               alt=""
             />
           </div>
-          <div class="col col-lg-4">
+          <div class="col col-lg-4 d-md-block d-none">
             <img
               src="./assets/img/about/burjKhalifa.jpeg"
               style="object-position: top"
@@ -1440,7 +1440,7 @@
       <span class="seperator seperator-bottom"></span>
       <div class="sectionWrapper">
         <div class="row no-gutters justify-space-between align-items-center">
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-12">
             <!-- <h2 class="sectionTitle">Testimonials</h2> -->
             <img src="./assets/img/quote.png" width="90" class="mb-4" alt="" />
             <p>
@@ -1457,7 +1457,7 @@
               style="transform: rotate(-45deg); z-index: -1; position: relative"
             />
           </div>
-          <div class="col-6 ml-auto">
+          <div class="col-6 ml-auto col-12">
             <div class="testimonialSliderWrap">
               <div class="testimonialSlider">
                 <div class="testimonialBlock">
@@ -1622,22 +1622,22 @@
         </div>
         <div class="absoluteFooter">
           <div class="row no-gutters">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
               <p>© Copyright - 2020 Go Holiday Ltd.</p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12">
               <div class="socialWrapper">
-                <a href="https://www.facebook.com/Goholidaysltd/">
+                <a href="https://www.facebook.com/Goholidaysltd/" target="_blank">
                   <img src="./assets/img/facebook.png" width="16" alt="" />
                 </a>
-                <a href="https://www.instagram.com/go_holidaysltd/">
+                <a href="https://www.instagram.com/go_holidaysltd/" target="_blank">
                   <img
                     src="./assets/img/instagram.png"
                     width="16"
                     alt="Instagram"
                   />
                 </a>
-                <a href="https://twitter.com/gohlidays/">
+                <a href="https://twitter.com/gohlidays/" target="_blank">
                   <img
                     src="./assets/img/twitter.png"
                     width="16"
@@ -1684,6 +1684,29 @@
         dots: false,
         nextArrow: $(".customSlickArrowNext"),
         prevArrow: $(".customSlickArrowPrev"),
+        responsive: [
+         {
+           breakpoint: 1199,
+           settings: {
+             slidesToShow: 4,
+             slidesToScroll: 2,
+           }
+         },
+         {
+           breakpoint: 991,
+           settings: {
+             slidesToShow: 3,
+             slidesToScroll: 2,
+           }
+         },
+         {
+           breakpoint: 600,
+           settings: {
+             slidesToShow: 1,
+             slidesToScroll: 1,
+           }
+         },
+       ]
       });
       $(".packagesSlider").slick({
         infinite: false,
@@ -1692,6 +1715,22 @@
         dots: false,
         nextArrow: $(".customSlickArrowNextPackage"),
         prevArrow: $(".customSlickArrowPrevPackage"),
+        responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
       });
       $(".testimonialSlider").slick({
         infinite: true,
@@ -1703,6 +1742,15 @@
         slidesToScroll: 1,
         dots: false,
         arrows: false,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
       });
     </script>
   </body>
